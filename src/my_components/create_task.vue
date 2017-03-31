@@ -1,0 +1,46 @@
+<template>
+  <div>
+    <div class="form-group">
+        <div class="col-sm-10">
+            <input @focus="clearAlert" v-model="name" type="text" class="form-control" placeholder="Input text">
+        </div>
+        <div class="col-sm-2">
+        <button class="button button-pill button-royal-flat hvr-push" @click="createTask(name)">Submit</button>
+        </div>
+        <div class="col-sm-12 alert alert-success" role="alert" id="success-alert" style="display:none;">
+            <strong>Success! </strong>
+            Task added.
+        </div>
+    </div>
+  </div>
+
+</template>
+<script>
+export default {
+    name: "create_task",
+    data(){
+      return {
+        name : ''
+      };
+    },
+    methods: {
+      clearAlert(){
+        $("#success-alert").hide();
+      },
+      createTask(task){
+        window.axios.post('/tasks', {name: task})
+          .then( response => {
+            console.log(response);
+            this.name = '';
+            $("#success-alert").alert();
+            $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
+              $("#success-alert").slideUp(500);
+            });
+          })
+          .catch( error => {
+            console.log(error);
+          });
+      }
+    }
+}
+</script>
