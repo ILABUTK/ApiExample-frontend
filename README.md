@@ -1,4 +1,4 @@
-# clear_vue
+# api-example-frontend
 
 > A Vue.js project
 
