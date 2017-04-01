@@ -10,8 +10,7 @@ let mix = require('laravel-mix');
  | file for your application, as well as bundling up your JS files.
  |
  */
-//icheck
-mix.copy('src/vendors/iCheck/skins/', 'css/iCheck/css', false);
+
 
 // mix.js('src/main.js', 'dist/');
 mix.js('src/bundle.js', 'dist/');

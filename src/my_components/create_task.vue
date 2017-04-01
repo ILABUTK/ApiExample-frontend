@@ -5,7 +5,7 @@
             <input @focus="clearAlert" v-model="name" type="text" class="form-control" placeholder="Input text">
         </div>
         <div class="col-sm-2">
-        <button class="button button-pill button-royal-flat hvr-push" @click="createTask(name)">Submit</button>
+        <button class="btn btn-primary" @click="createTask(name)">Submit</button>
         </div>
         <div class="col-sm-12 alert alert-success" role="alert" id="success-alert" style="display:none;">
             <strong>Success! </strong>

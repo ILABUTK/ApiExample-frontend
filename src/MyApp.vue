@@ -19,5 +19,4 @@ export default {
 }
 </script>
 
-<style src="./vendors/font-awesome/css/font-awesome.min.css"></style>
-<style src="./vendors/themify-icons/css/themify-icons.css"></style>
+<style src="./vendors/bootstrap/dist/css/bootstrap.min.css">

@@ -1,14 +1,10 @@
 <template>
-  <div class="panel panel-widget">
-      <div class="panel-heading stat">
-          <h3>Tasks List</h3>
-      </div>
-      <div class="panel-body">
-          <ul v-for="task in tasks" class="nav nav-stacked nav_border">
-              <li><span>{{task.name}} <a href="#" class="pull-right" @click="deleteTask(task.id)">X</a></span></li>
-          </ul>
-      </div>
-      <router-link to="/createTask">Create a new task</router-link>
+  <div>
+    <h3>Tasks List</h3>
+    <ul class="list-group">
+        <li v-for="task in tasks" class="list-group-item"><span>{{task.name}} <a href="#" class="pull-right" @click="deleteTask(task.id)">X</a></span></li>
+    </ul>
+    <router-link to="/createTask">Create a new task</router-link>
   </div>
 </template>
 <script>
@@ -44,4 +40,3 @@ export default {
     }
 }
 </script>
-<style src="../vendors/ihover/src/ihover.min.css"></style>
