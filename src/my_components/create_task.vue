@@ -2,7 +2,7 @@
   <div>
     <div class="form-group">
         <div class="col-sm-10">
-            <input @focus="clearAlert" v-model="name" type="text" class="form-control" placeholder="Input text">
+            <input @focus="hideAlert" v-model="name" type="text" class="form-control" placeholder="task name">
         </div>
         <div class="col-sm-2">
         <button class="btn btn-primary" @click="createTask(name)">Submit</button>
@@ -24,7 +24,7 @@ export default {
       };
     },
     methods: {
-      clearAlert(){
+      hideAlert(){
         $("#success-alert").hide();
       },
       createTask(task){
