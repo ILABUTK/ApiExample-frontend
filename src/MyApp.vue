@@ -5,7 +5,7 @@
 </template>
 <script>
 
-import bootstrap from './vendors/bootstrap/dist/js/bootstrap.min.js';
+require('bootstrap-sass');
 
 export default {
     name: 'app',
@@ -19,4 +19,7 @@ export default {
 }
 </script>
 
-<style src="./vendors/bootstrap/dist/css/bootstrap.min.css">
+<style lang="scss">
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+</style>
