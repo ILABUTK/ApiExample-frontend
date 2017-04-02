@@ -32,10 +32,6 @@ export default {
           .then( response => {
             console.log(response);
             this.name = '';
-            $("#success-alert").alert();
-            $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
-              $("#success-alert").slideUp(500);
-            });
           })
           .catch( error => {
             console.log(error);

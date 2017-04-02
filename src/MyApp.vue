@@ -10,11 +10,10 @@ require('bootstrap-sass');
 export default {
     name: 'app',
     created: function() {
-        window.hostURL = 'http://ApiExample.dev';
         window.$ = window.jQuery = require('jquery');
         window._ = require('lodash');
         window.axios = require('axios');
-        window.axios.defaults.baseURL = hostURL + '/' + 'api';
+        window.axios.defaults.baseURL = 'http://ApiExample.dev/api';
     }
 }
 </script>
