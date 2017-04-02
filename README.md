@@ -8,9 +8,6 @@
 # install dependencies
 npm install
 
-# install plugins
-bower install
-
 # serve with hot reload at localhost:8000
 npm run dev
 
