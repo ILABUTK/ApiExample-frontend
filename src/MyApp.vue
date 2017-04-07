@@ -13,7 +13,7 @@ export default {
         window.$ = window.jQuery = require('jquery');
         window._ = require('lodash');
         window.axios = require('axios');
-        window.axios.defaults.baseURL = 'http://ApiExample.dev/api';
+        window.axios.defaults.baseURL = 'http://localhost:8000/api'; //http://ApiExample.dev/api
     }
 }
 </script>
